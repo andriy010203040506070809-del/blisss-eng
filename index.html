@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLISSS.ENG — Англійська в кайф ✨</title>
+  <meta name="description" content="BLISSS.ENG — школа сучасної англійської, де мову не зубрять, а проживають у кайф. Індивідуальні, парні та групові заняття.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#" class="nav-logo">BLISSS.<span class="eng">ENG</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="draw-underline">Про нас</a></li>
+        <li><a href="#formats" class="draw-underline">Формати</a></li>
+        <li><a href="#pricing" class="draw-underline">Ціни</a></li>
+        <li><a href="#reviews" class="draw-underline">Відгуки</a></li>
+        <li><a href="#faq" class="draw-underline">FAQ</a></li>
+      </ul>
+      <a href="#quiz" class="nav-cta-btn">Гоу на пробний 🤙</a>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mob-menu" id="mobMenu">
+    <button class="mob-close" id="mobClose" aria-label="Закрити">&times;</button>
+    <a href="#about" class="mob-link">Про нас</a>
+    <a href="#formats" class="mob-link">Формати</a>
+    <a href="#pricing" class="mob-link">Ціни</a>
+    <a href="#reviews" class="mob-link">Відгуки</a>
+    <a href="#faq" class="mob-link">FAQ</a>
+    <a href="#quiz" class="btn-yellow mob-link">Гоу на пробний 🤙</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-dots" aria-hidden="true"></div>
+    <div class="hero-candles" aria-hidden="true">
+      <div class="candle" style="--h:4%;--left:25%"></div>
+      <div class="candle" style="--h:7%;--left:27.5%"></div>
+      <div class="candle" style="--h:6%;--left:30%"></div>
+      <div class="candle" style="--h:10%;--left:32.5%"></div>
+      <div class="candle" style="--h:9%;--left:35%"></div>
+      <div class="candle" style="--h:14%;--left:37.5%"></div>
+      <div class="candle" style="--h:12%;--left:40%"></div>
+      <div class="candle" style="--h:18%;--left:42.5%"></div>
+      <div class="candle" style="--h:16%;--left:45%"></div>
+      <div class="candle" style="--h:22%;--left:47.5%"></div>
+      <div class="candle" style="--h:20%;--left:50%"></div>
+      <div class="candle" style="--h:26%;--left:52.5%"></div>
+      <div class="candle" style="--h:24%;--left:55%"></div>
+      <div class="candle" style="--h:30%;--left:57.5%"></div>
+      <div class="candle" style="--h:28%;--left:60%"></div>
+      <div class="candle" style="--h:35%;--left:62.5%"></div>
+      <div class="candle" style="--h:32%;--left:65%"></div>
+      <div class="candle" style="--h:40%;--left:67.5%"></div>
+      <div class="candle" style="--h:37%;--left:70%"></div>
+      <div class="candle" style="--h:46%;--left:72.5%"></div>
+      <div class="candle" style="--h:42%;--left:75%"></div>
+      <div class="candle" style="--h:52%;--left:77.5%"></div>
+      <div class="candle" style="--h:48%;--left:80%"></div>
+      <div class="candle" style="--h:58%;--left:82.5%"></div>
+      <div class="candle" style="--h:54%;--left:85%"></div>
+      <div class="candle" style="--h:65%;--left:87.5%"></div>
+      <div class="candle" style="--h:60%;--left:90%"></div>
+      <div class="candle" style="--h:72%;--left:92.5%"></div>
+      <div class="candle" style="--h:68%;--left:95%"></div>
+      <div class="candle" style="--h:80%;--left:97.5%"></div>
+    </div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>
+            Хей! <span class="blue shimmer-text">Гоу спікати</span><br>
+            англійською<br>
+            в кайф<span class="typing-cursor"></span>
+          </h1>
+          <p class="hero-desc">
+            No stress — ми покажемо, як кайфувати від англійської вже з першого заняття.
+            Комунікативна методика, інтерактивний додаток, фокус на твоїх цілях 🤙
+          </p>
+          <div class="hero-btns">
+            <div class="cta-wrap">
+              <img class="hero-arrow" src="Vector 105.svg" alt="" aria-hidden="true">
+              <a href="#quiz" class="btn-yellow glow-pulse btn-magnetic">Безкоштовний пробний урок</a>
+            </div>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">5+</div>
+              <div class="hero-stat-txt">років досвіду</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">200+</div>
+              <div class="hero-stat-txt">щасливих учнів</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">4</div>
+              <div class="hero-stat-txt">формати навчання</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-blob">
+            <span class="hero-float-emoji">🔥</span>
+            <span class="hero-float-emoji">✈️</span>
+            <span class="hero-float-emoji">👀</span>
+            <img src="assets/page13_img1.png" alt="BLISSS.ENG">
+            <div class="hero-blob-text">Англійська нарешті в кайф 🤙</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" style="background: var(--yellow);">
+    <div class="marquee-track">
+      <span>SPEAKING ✨</span><span>READING 📖</span><span>LISTENING 🎧</span><span>GRAMMAR 🧠</span><span>WRITING ✍️</span><span>VOCABULARY 💬</span><span>BLISSS 🔥</span><span>ENGLISH ✈️</span>
+      <span>SPEAKING ✨</span><span>READING 📖</span><span>LISTENING 🎧</span><span>GRAMMAR 🧠</span><span>WRITING ✍️</span><span>VOCABULARY 💬</span><span>BLISSS 🔥</span><span>ENGLISH ✈️</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="fade-up">
+          <span class="badge badge-dark">Speaking first 🎤</span>
+          <h2>Гоу спікати, бо практика сама себе не зробить 😉</h2>
+          <p class="about-desc">
+            На уроках ми прокачуємо reading, listening, writing, grammar та обов'язково speaking!
+            Ми працюємо за комунікативною методикою та лексичним підходом —
+            основний фокус саме на відточення вивченого в живому спілкуванні.
+            No stress, ми розберемо будь-який граматичний хаос на пальцях!
+          </p>
+          <div class="about-pills">
+            <div class="pill">Speaking first</div>
+            <div class="pill">Під твою ціль</div>
+            <div class="pill">Лексичний підхід</div>
+            <div class="pill">Без зубріння</div>
+          </div>
+        </div>
+        <div class="fade-up">
+          <div class="about-card">
+            <h3>Навчання в задоволення — done ✔️</h3>
+            <p>
+              Уроки на інтерактивній платформі, де зберігаються всі матеріали.
+              Для слів — Quizlet, зручний додаток, який робить процес ще ефективнішим.
+              Зловити повний дзен і вчити інгліш у кайф — це про нас
+            </p>
+            <div class="about-tools">
+              <span class="tool-chip">🎨 Miro</span>
+              <span class="tool-chip">📚 Quizlet</span>
+              <span class="tool-chip">💻 Online</span>
+              <span class="tool-chip">📹 Zoom</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="quiz-section" id="quiz">
+    <div class="container">
+      <div class="quiz-header fade-up">
+        <span class="badge badge-yellow">Безкоштовно</span>
+        <h2>Визнач свій рівень англійської</h2>
+        <p class="quiz-sub">Дай відповідь на 5 простих питань — і отримай безкоштовний пробний урок з визначенням рівня</p>
+      </div>
+      <div class="quiz-wrap fade-up">
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="quizProgressBar"></div>
+        </div>
+        <div class="quiz-slides" id="quizSlides">
+
+          <div class="quiz-slide active" data-step="1">
+            <h3>Скільки тобі років?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="7-12">7–12 років</button>
+              <button class="quiz-option" data-value="13-17">13–17 років</button>
+              <button class="quiz-option" data-value="18-25">18–25 років</button>
+              <button class="quiz-option" data-value="26+">26+ років</button>
+            </div>
+            <div class="quiz-nav">
+              <div></div>
+              <button type="button" class="quiz-nav-btn quiz-next" disabled>Далі</button>
+            </div>
+          </div>
+
+          <div class="quiz-slide" data-step="2">
+            <h3>Чи вчив/ла англійську раніше?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="never">Ні, ніколи</button>
+              <button class="quiz-option" data-value="school">Трохи в школі</button>
+              <button class="quiz-option" data-value="long-ago">Так, але давно</button>
+              <button class="quiz-option" data-value="now">Вчу зараз</button>
+            </div>
+            <div class="quiz-nav">
+              <button type="button" class="quiz-nav-btn quiz-prev">Назад</button>
+              <button type="button" class="quiz-nav-btn quiz-next" disabled>Далі</button>
+            </div>
+          </div>
+
+          <div class="quiz-slide" data-step="3">
+            <h3>Як оцінюєш свій рівень?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="zero">Нульовий — починаю з нуля</button>
+              <button class="quiz-option" data-value="beginner">Початковий — знаю базу</button>
+              <button class="quiz-option" data-value="intermediate">Середній — можу спілкуватись</button>
+              <button class="quiz-option" data-value="advanced">Високий — хочу прокачати</button>
+            </div>
+            <div class="quiz-nav">
+              <button type="button" class="quiz-nav-btn quiz-prev">Назад</button>
+              <button type="button" class="quiz-nav-btn quiz-next" disabled>Далі</button>
+            </div>
+          </div>
+
+          <div class="quiz-slide" data-step="4">
+            <h3>Яка твоя головна мета?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="speaking">Вільно розмовляти</button>
+              <button class="quiz-option" data-value="work">Для роботи чи бізнесу</button>
+              <button class="quiz-option" data-value="exams">Підготовка до екзаменів</button>
+              <button class="quiz-option" data-value="travel">Для подорожей</button>
+            </div>
+            <div class="quiz-nav">
+              <button type="button" class="quiz-nav-btn quiz-prev">Назад</button>
+              <button type="button" class="quiz-nav-btn quiz-next" disabled>Далі</button>
+            </div>
+          </div>
+
+          <div class="quiz-slide" data-step="5">
+            <h3>Який формат навчання тобі підходить?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="individual">Індивідуально</button>
+              <button class="quiz-option" data-value="pair">В парі</button>
+              <button class="quiz-option" data-value="group">В групі</button>
+              <button class="quiz-option" data-value="dunno">Не знаю, порадьте</button>
+            </div>
+            <div class="quiz-nav">
+              <button type="button" class="quiz-nav-btn quiz-prev">Назад</button>
+              <button type="button" class="quiz-nav-btn quiz-next" disabled>Далі</button>
+            </div>
+          </div>
+
+          <div class="quiz-slide" data-step="form">
+            <h3>Майже готово!</h3>
+            <p class="quiz-form-desc">Залиш свій номер — ми зателефонуємо, визначимо твій рівень та запишемо тебе на безкоштовний пробний урок</p>
+            <form class="quiz-form" id="quizForm" >
+              <div class="form-field">
+                <label for="quizName">Твоє ім'я</label>
+                <input type="text" id="quizName" name="name" placeholder="Як тебе звати?" required>
+              </div>
+              <div class="form-field">
+                <label>Де з тобою зв'язатися?</label>
+                <div class="contact-tabs">
+                  <button type="button" class="contact-tab active" data-contact="instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    Instagram
+                  </button>
+                  <button type="button" class="contact-tab" data-contact="telegram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    Telegram
+                  </button>
+                  <button type="button" class="contact-tab" data-contact="phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Зателефонувати
+                  </button>
+                </div>
+                <input type="hidden" name="quiz_contact_method" id="quizContactMethod" value="instagram">
+              </div>
+              <div class="form-field ig-field">
+                <label for="quizInstagram">Твій Instagram</label>
+                <input type="text" id="quizInstagram" name="instagram" placeholder="@username">
+              </div>
+              <div class="form-field">
+                <label for="quizPhone">Номер телефону</label>
+                <input type="tel" id="quizPhone" name="phone" placeholder="+380 __ ___ __ __" required>
+              </div>
+              <button type="submit" class="btn-yellow form-submit">Отримати безкоштовний урок</button>
+              <p class="form-note">Натискаючи кнопку, ти погоджуєшся з обробкою персональних даних</p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="founder" id="founder">
+
+
+
+    <div class="container">
+      <div class="founder-grid">
+        <div class="founder-photo-wrap fade-up">
+          <img class="founder-photo" src="https://res.cloudinary.com/dv4xqeucm/image/upload/q_auto,f_auto,w_800/v1791550823/IMG_1991_qw2wty.heic" alt="Андріана — засновниця BLISSS.ENG" loading="lazy">
+          <div class="founder-exp">5+ років досвіду ✨</div>
+        </div>
+        <div class="founder-info fade-up">
+          <span class="badge badge-blue">Давайте знайомитись, я</span>
+          <h2>Андріана</h2>
+          <p class="founder-role">Засновниця та викладачка BLISSS.ENG</p>
+          <p class="founder-text">
+            Хей! Я Андріана 👋 Створила BLISSS.ENG, щоб показати — англійська може бути
+            в кайф, а не в стрес. За 5 років допомогла сотням людей заговорити
+            англійською впевнено й легко. Моя місія — зламати стереотип про нудні уроки
+            і зробити шлях до вільного спілкування найприємнішим досвідом.
+          </p>
+          <div class="founder-tags">
+            <span class="founder-tag">5+ років досвіду</span>
+            <span class="founder-tag">Сертифікований викладач</span>
+            <span class="founder-tag">Комунікативна методика</span>
+          </div>
+          <div class="founder-certs">
+            <h4>Сертифікати</h4>
+            <div class="certs-grid">
+              <a href="https://res.cloudinary.com/dv4xqeucm/image/upload/q_auto,f_auto/v1791551337/photo_2026-10-08_17-45-08_pvidyf.jpg" target="_blank" rel="noopener" class="cert-card">
+                <img src="https://res.cloudinary.com/dv4xqeucm/image/upload/q_auto,f_auto,w_400/v1791551337/photo_2026-10-08_17-45-08_pvidyf.jpg" alt="Сертифікат" loading="lazy">
+              </a>
+              <a href="https://res.cloudinary.com/dv4xqeucm/image/upload/pg_1,q_auto,f_auto/Poyasnik_Andriana_dk5vuh.pdf" target="_blank" rel="noopener" class="cert-card">
+                <img src="https://res.cloudinary.com/dv4xqeucm/image/upload/pg_1,q_auto,f_auto,w_400/Poyasnik_Andriana_dk5vuh.pdf" alt="Certificate of Completion — Lexical Approach" loading="lazy">
+              </a>
+              <a href="https://res.cloudinary.com/dv4xqeucm/image/upload/pg_1,q_auto,f_auto/Poyasnik_Andriana_pf0uqh.pdf" target="_blank" rel="noopener" class="cert-card">
+                <img src="https://res.cloudinary.com/dv4xqeucm/image/upload/pg_1,q_auto,f_auto,w_400/Poyasnik_Andriana_pf0uqh.pdf" alt="Certificate of Attendance" loading="lazy">
+              </a>
+              <a href="https://res.cloudinary.com/dv4xqeucm/image/upload/pg_1,q_auto,f_auto/Поясник_Андріана_jdwgmp.pdf" target="_blank" rel="noopener" class="cert-card">
+                <img src="https://res.cloudinary.com/dv4xqeucm/image/upload/pg_1,q_auto,f_auto,w_400/Поясник_Андріана_jdwgmp.pdf" alt="Сертифікат" loading="lazy">
+              </a>
+            </div>
+            <div class="celta-feature">
+              <a href="https://res.cloudinary.com/dv4xqeucm/image/upload/pg_1,q_auto,f_auto/ANDRIANA_POIASNYK_CELTA_End_of_course_report.docx_nzfj5m" target="_blank" rel="noopener" class="celta-card">
+                <img src="https://res.cloudinary.com/dv4xqeucm/image/upload/pg_1,q_auto,f_auto,w_400/ANDRIANA_POIASNYK_CELTA_End_of_course_report.docx_nzfj5m" alt="CELTA Certificate" loading="lazy">
+              </a>
+              <div class="celta-info">
+                <h4>CELTA</h4>
+                <p class="celta-full">Certificate in English Language Teaching to Adults</p>
+                <p class="celta-desc">
+                  CELTA — це міжнародно визнаний кембриджський сертифікат, який підтверджує високу кваліфікацію викладача англійської мови як іноземної, даючи право викладати її дорослим у будь-якій країні світу.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATS -->
+  <section class="formats" id="formats">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="badge badge-yellow">Формати</span>
+        <h2>Обери свій vibe навчання</h2>
+        <p class="sub">Індивідуально, в парі з buddy чи в мінігрупі — є формат під кожного</p>
+      </div>
+      <div class="formats-grid">
+        <div class="fmt-card fade-up tilt-card" data-delay="1">
+          <span class="fmt-emoji">🎧</span>
+          <h3>Індивідуальні</h3>
+          <p>Персоналізована програма суто під твою ціль — робота, бізнес чи НМТ. Гнучкий графік і 100% уваги викладача</p>
+          <div class="fmt-bottom">
+            <span class="fmt-tag">100% фокус на тобі</span>
+            <a href="#pricing" class="fmt-price-btn">Ціна</a>
+          </div>
+        </div>
+        <div class="fmt-card fade-up tilt-card" data-delay="2">
+          <span class="fmt-emoji">🤝</span>
+          <h3>Парні</h3>
+          <p>Навчання удвох із другом чи партнером. Акцент на живе спілкування та взаємну підтримку — your study buddy is here!</p>
+          <div class="fmt-bottom">
+            <span class="fmt-tag">2 людини</span>
+            <a href="#pricing" class="fmt-price-btn">Ціна</a>
+          </div>
+        </div>
+        <div class="fmt-card fade-up tilt-card" data-delay="3">
+          <span class="fmt-emoji">🎉</span>
+          <h3>Групові</h3>
+          <p>Динамічні мінігрупи, брейкаут-руми, розмовна практика з різними акцентами й поглядами — it's a vibe!</p>
+          <div class="fmt-bottom">
+            <span class="fmt-tag">4 людини</span>
+            <a href="#pricing" class="fmt-price-btn">Ціна</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHERS -->
+  <section class="teachers" id="teachers">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="badge badge-yellow">Наша команда</span>
+        <h2>Викладачі BLISSS.<span style="color:var(--light-blue)">ENG</span></h2>
+        <p class="sub">Ми на одній хвилі — дружні, сучасні та заточені на результат 🔥</p>
+      </div>
+      <div class="teachers-grid">
+        <div class="teacher-card fade-up">
+          <img class="teacher-img" src="https://res.cloudinary.com/dv4xqeucm/image/upload/q_auto,f_auto,w_600/v1791550823/IMG_1991_qw2wty.heic" alt="Андріана — засновниця BLISSS.ENG" loading="lazy">
+          <div class="teacher-body">
+            <h3>Андріана</h3>
+            <p class="role">Філолог · Засновниця BLISSS.ENG</p>
+            <p>5 років досвіду, рівень C1. Комунікативна методика та лексичний підхід — навчання в кайф</p>
+            <div class="teacher-chips">
+              <button class="video-play-btn video-play-btn--filled" data-video="https://res.cloudinary.com/dv4xqeucm/video/upload/v1791216587/%D0%92%D1%96%D0%B4%D0%B5%D0%BE_%D0%B7%D0%B2%D0%B5%D1%80%D0%BD%D0%B5%D0%BD%D0%BD%D1%8F_sy5fyv.mp4" aria-label="Дивитись відео звернення">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                Відео знайомство
+              </button>
+              <div class="chips-break"></div>
+              <span class="teacher-chip">General English</span>
+              <span class="teacher-chip">Business English</span>
+              <span class="teacher-chip">B1–C1</span>
+            </div>
+          </div>
+        </div>
+        <div class="teacher-card fade-up">
+          <img class="teacher-img" src="https://res.cloudinary.com/dv4xqeucm/image/upload/q_auto,f_auto,w_600,ar_1:1,c_fill,g_auto/v1791203548/IMG_0601_mtzslr.png" alt="Дарія — викладач BLISSS.ENG" loading="lazy">
+          <div class="teacher-body">
+            <h3>Дарія</h3>
+            <p class="role">Філолог · Перекладач</p>
+            <p>В освіті з 2021 року, репетитор з 2022. Закохую в англійську з першого уроку — від General до Business, рівні A0–C1 🤍</p>
+            <div class="teacher-chips">
+              <button class="video-play-btn video-play-btn--filled" data-video="https://res.cloudinary.com/dv4xqeucm/video/upload/v1791552146/5ECC258A-9A9F-4FDB-9419-5A507A89E74F_qj9fwt.mov" aria-label="Дивитись відео звернення">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                Відео знайомство
+              </button>
+              <div class="chips-break"></div>
+              <span class="teacher-chip">General English</span>
+              <span class="teacher-chip">Business English</span>
+              <span class="teacher-chip">A0–C1</span>
+              <span class="teacher-chip">IELTS</span>
+            </div>
+          </div>
+        </div>
+        <div class="teacher-card fade-up">
+          <img class="teacher-img" src="https://res.cloudinary.com/dv4xqeucm/image/upload/q_auto,f_auto,w_600,ar_1:1,c_fill,g_face,z_0.5/v1791385856/photo_2026-10-07_18-05-53_xy3ssc.jpg" alt="Оля — викладач BLISSS.ENG" loading="lazy">
+          <div class="teacher-body">
+            <h3>Оля</h3>
+            <p class="role">Філолог · Перекладач</p>
+            <p>Філолог з досвідом в IT — знаю, як працює англійська і в житті, і в бізнесі. Навчалась у Німеччині, викладаю з 2021. Створюю атмосферу, де не страшно помилятись</p>
+            <div class="teacher-chips">
+              <button class="video-play-btn video-play-btn--filled" data-video="https://res.cloudinary.com/dv4xqeucm/video/upload/v1791387106/IMG_2950_f3wcrz.mp4" aria-label="Дивитись відео звернення">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                Відео знайомство
+              </button>
+              <div class="chips-break"></div>
+              <span class="teacher-chip">General English</span>
+              <span class="teacher-chip">Business English</span>
+              <span class="teacher-chip">A0–C1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="badge badge-dark">Тарифи</span>
+        <h2>Вигідні ціни для кожного</h2>
+        <p class="sub">Чим більше людей — тим вигідніше! Обери свою категорію 🤙</p>
+      </div>
+      <div class="price-tabs fade-up">
+        <button class="price-tab active" data-tab="kids">🧒 Діти</button>
+        <button class="price-tab" data-tab="ab2">📚 Дорослі (A1–B1)</button>
+        <button class="price-tab" data-tab="ac1">🚀 Дорослі (B2–C1)</button>
+        <button class="price-tab" data-tab="exams">🎯 Підготовка до екзаменів</button>
+      </div>
+
+      <div class="price-cat active" data-cat="kids">
+        <div class="p-card fade-up">
+          <div class="p-icon">🎧</div>
+          <h3>Індивідуальні</h3>
+          <p class="p-sub">1 на 1 з викладачем</p>
+          <div class="p-price">550 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Персональна програма</li>
+            <li>Гнучкий графік</li>
+            <li>100% уваги викладача</li>
+            <li>Матеріали на Miro</li>
+          </ul>
+          <a href="#quiz" class="btn-dark">Записатись</a>
+        </div>
+        <div class="p-card pop fade-up">
+          <div class="pop-label">🔥 Популярний</div>
+          <div class="p-icon">🤝</div>
+          <h3>Парні</h3>
+          <p class="p-sub">Навчання удвох</p>
+          <div class="p-price">400 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Навчання з buddy</li>
+            <li>Розмовна практика</li>
+            <li>Study buddy підтримка</li>
+            <li>Матеріали на Miro</li>
+          </ul>
+          <a href="#quiz" class="btn-yellow">Записатись</a>
+        </div>
+        <div class="p-card fade-up">
+          <div class="p-icon">🎉</div>
+          <h3>Групові</h3>
+          <p class="p-sub">Мінігрупа 4 людини</p>
+          <div class="p-price">300 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Динамічні мінігрупи</li>
+            <li>Брейкаут-руми</li>
+            <li>Різні акценти</li>
+            <li>Матеріали на Miro</li>
+          </ul>
+          <a href="#quiz" class="btn-dark">Записатись</a>
+        </div>
+      </div>
+
+      <div class="price-cat" data-cat="ab2">
+        <div class="p-card fade-up">
+          <div class="p-icon">🎧</div>
+          <h3>Індивідуальні</h3>
+          <p class="p-sub">1 на 1 з викладачем</p>
+          <div class="p-price">650 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Персональна програма</li>
+            <li>Гнучкий графік</li>
+            <li>100% уваги викладача</li>
+            <li>Матеріали на Miro</li>
+          </ul>
+          <a href="#quiz" class="btn-dark">Записатись</a>
+        </div>
+        <div class="p-card pop fade-up">
+          <div class="pop-label">🔥 Популярний</div>
+          <div class="p-icon">🤝</div>
+          <h3>Парні</h3>
+          <p class="p-sub">Навчання удвох</p>
+          <div class="p-price">450 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Навчання з buddy</li>
+            <li>Розмовна практика</li>
+            <li>Study buddy підтримка</li>
+            <li>Матеріали на Miro</li>
+          </ul>
+          <a href="#quiz" class="btn-yellow">Записатись</a>
+        </div>
+        <div class="p-card fade-up">
+          <div class="p-icon">🎉</div>
+          <h3>Групові</h3>
+          <p class="p-sub">Мінігрупа 4 людини</p>
+          <div class="p-price">350 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Динамічні мінігрупи</li>
+            <li>Брейкаут-руми</li>
+            <li>Різні акценти</li>
+            <li>Матеріали на Miro</li>
+          </ul>
+          <a href="#quiz" class="btn-dark">Записатись</a>
+        </div>
+      </div>
+
+      <div class="price-cat" data-cat="ac1">
+        <div class="p-card fade-up">
+          <div class="p-icon">🎧</div>
+          <h3>Індивідуальні</h3>
+          <p class="p-sub">1 на 1 з викладачем</p>
+          <div class="p-price">750 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Персональна програма</li>
+            <li>Гнучкий графік</li>
+            <li>100% уваги викладача</li>
+            <li>Матеріали на Miro</li>
+          </ul>
+          <a href="#quiz" class="btn-dark">Записатись</a>
+        </div>
+        <div class="p-card pop fade-up">
+          <div class="pop-label">🔥 Популярний</div>
+          <div class="p-icon">🤝</div>
+          <h3>Парні</h3>
+          <p class="p-sub">Навчання удвох</p>
+          <div class="p-price">550 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Навчання з buddy</li>
+            <li>Розмовна практика</li>
+            <li>Study buddy підтримка</li>
+            <li>Матеріали на Miro</li>
+          </ul>
+          <a href="#quiz" class="btn-yellow">Записатись</a>
+        </div>
+        <div class="p-card fade-up">
+          <div class="p-icon">🎉</div>
+          <h3>Групові</h3>
+          <p class="p-sub">Мінігрупа 4 людини</p>
+          <div class="p-price">450 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Динамічні мінігрупи</li>
+            <li>Брейкаут-руми</li>
+            <li>Різні акценти</li>
+            <li>Матеріали на Miro</li>
+          </ul>
+          <a href="#quiz" class="btn-dark">Записатись</a>
+        </div>
+      </div>
+
+      <div class="price-cat" data-cat="exams">
+        <div class="p-card fade-up">
+          <div class="p-icon">🎯</div>
+          <h3>IELTS</h3>
+          <p class="p-sub">Індивідуальна підготовка</p>
+          <div class="p-price">750 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Listening, Reading, Writing & Speaking</li>
+            <li>Exam strategies для кожної частини</li>
+            <li>Academic Vocabulary + граматика для Band 7+</li>
+            <li>Детальний feedback на Writing & Speaking</li>
+            <li>Mock tests та відстеження прогресу</li>
+            <li>Персональна стратегія підготовки</li>
+          </ul>
+          <a href="#quiz" class="btn-dark">Записатись</a>
+        </div>
+        <div class="p-card pop fade-up">
+          <div class="pop-label">🔥 Популярний</div>
+          <div class="p-icon">📜</div>
+          <h3>CAE / FCE</h3>
+          <p class="p-sub">Індивідуальна підготовка</p>
+          <div class="p-price">750 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>B2 First (FCE) та C1 Advanced (CAE)</li>
+            <li>Reading, Use of English, Writing, Listening, Speaking</li>
+            <li>Exam strategies для кожного типу завдань</li>
+            <li>Fluency, accuracy & natural English</li>
+            <li>Mock exams та аналіз прогресу</li>
+            <li>Реальне підвищення рівня, а не лише формат</li>
+          </ul>
+          <a href="#quiz" class="btn-yellow">Записатись</a>
+        </div>
+        <div class="p-card fade-up">
+          <div class="p-icon">🇺🇦</div>
+          <h3>НМТ</h3>
+          <p class="p-sub">Індивідуальна підготовка</p>
+          <div class="p-price">650 <span>грн/год</span></div>
+          <ul class="p-feat">
+            <li>Підготовка за форматом НМТ</li>
+            <li>Граматика та лексика рівня B2–C1</li>
+            <li>Стратегії розв'язання тестових завдань</li>
+            <li>Reading & Use of English</li>
+            <li>Регулярні пробні тести</li>
+            <li>Аналіз слабких місць та робота над ними</li>
+          </ul>
+          <a href="#quiz" class="btn-dark">Записатись</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="badge badge-yellow">Відгуки</span>
+        <h2>Що кажуть наші students</h2>
+        <p class="sub">Реальні результати — від точки А до точки Б 🚀</p>
+      </div>
+      <div class="reviews-masonry">
+        <!-- Row 1: 3 cards (full — photo, stars, detail) -->
+        <div class="rev-row rev-row-3">
+          <div class="rev-card rev-card--full fade-up">
+            <div class="rev-top">
+              <div class="rev-avatar">👩</div>
+              <div>
+                <div class="rev-name">Імʼя Прізвище</div>
+                <div class="rev-detail">Учениця, 22 роки</div>
+              </div>
+            </div>
+            <div class="rev-stars">⭐⭐⭐⭐⭐</div>
+            <p class="rev-text">«Тут буде реальний відгук учня — як змінився рівень, що сподобалось, як проходили уроки та чому BLISSS.ENG це просто match! ✨»</p>
+          </div>
+          <div class="rev-card rev-card--full fade-up">
+            <div class="rev-top">
+              <div class="rev-avatar">👨</div>
+              <div>
+                <div class="rev-name">Імʼя Прізвище</div>
+                <div class="rev-detail">Учень, 28 років</div>
+              </div>
+            </div>
+            <div class="rev-stars">⭐⭐⭐⭐⭐</div>
+            <p class="rev-text">«Тут буде реальний відгук учня — як змінився рівень, що сподобалось та чому BLISSS.ENG це просто match! ✨»</p>
+          </div>
+          <div class="rev-card rev-card--full fade-up">
+            <div class="rev-top">
+              <div class="rev-avatar">👩</div>
+              <div>
+                <div class="rev-name">Імʼя Прізвище</div>
+                <div class="rev-detail">Учениця, 19 років</div>
+              </div>
+            </div>
+            <div class="rev-stars">⭐⭐⭐⭐⭐</div>
+            <p class="rev-text">«Тут буде реальний відгук учня ✨»</p>
+          </div>
+        </div>
+        <!-- Row 2: 4 cards (compact — name + text only) -->
+        <div class="rev-row rev-row-4">
+          <div class="rev-card rev-card--compact fade-up">
+            <div class="rev-name">Вероніка</div>
+            <p class="rev-text">«Мені прям подобається ходити на уроки, лайк без жодної напруги. З розумінням ще трохи хард, але вже набагато приємніше. І хочеться щось почитати й послухати самій — а це вже прогрес!»</p>
+          </div>
+          <div class="rev-card rev-card--compact fade-up">
+            <div class="rev-name">Лера</div>
+            <p class="rev-text">«Кайфую від уроків! Ріл, стільки нетворкінгу, словечок, розмов — кожен лессон як мініівент. А ще емпатія на максималках, тішуся шо стала частинкою цього всього ✨»</p>
+          </div>
+          <div class="rev-card rev-card--compact fade-up">
+            <div class="rev-name">Оксана</div>
+            <p class="rev-text">«Не боюсь говорити й помилятись — це бігест він для мене. Подруга сказала шо я спікаю класно, а це показник. Завдання цікаві, свобода на заняттях — лав іт»</p>
+          </div>
+          <div class="rev-card rev-card--compact fade-up">
+            <div class="rev-name">Дмитро</div>
+            <p class="rev-text">«Чесно? Не думав що буду кайфувати від англійської. Атмосфера супер чілл, час на уроці летить так шо навіть не помічаєш»</p>
+          </div>
+        </div>
+        <!-- Row 3: 3 cards (compact) + fade -->
+        <div class="rev-row rev-row-3 rev-row-fade">
+          <div class="rev-card rev-card--compact fade-up">
+            <div class="rev-name">Аліна</div>
+            <p class="rev-text">«Адаптивність під мій темп — це екзактлі те шо я шукала. Кожен урок змістовний і не нудний, ну і вайб на заняттях топ»</p>
+          </div>
+          <div class="rev-card rev-card--compact fade-up">
+            <div class="rev-name">Максим</div>
+            <p class="rev-text">«Прогрес ріл є, і це після пари місяців. Викладач вкладається на фул, відчувається що людині не байдуже»</p>
+          </div>
+          <div class="rev-card rev-card--compact fade-up">
+            <div class="rev-name">Софія</div>
+            <p class="rev-text">«Легше сприймаю тексти, аудіо нарешті розумію без паніки. Вонт ту гоу далі!»</p>
+          </div>
+        </div>
+        <div class="rev-cta">
+          <a href="https://www.instagram.com/stories/highlights/blisss.eng/" target="_blank" rel="noopener" class="btn-yellow glow-pulse">Читати всі відгуки ✨</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="badge badge-dark">FAQ</span>
+        <h2>Часті питання</h2>
+        <p class="sub">Не знайшов відповідь? Напиши нам — ми always на звʼязку 😉</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item fade-up">
+          <button class="faq-q">Як проходять уроки?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Уроки проходять online на інтерактивній платформі Miro — там зберігаються всі матеріали.
+            Ми працюємо за комунікативною методикою — основний фокус на speaking.
+            Плюс Quizlet для vocabulary. Кожен урок — мікс grammar, listening, reading
+            та обовʼязково розмовної практики 🤙
+          </div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q">Як оплачуються заняття?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Оплата за пакет занять — чим більше берешь, тим вигідніше!
+            Деталі обговорюємо на пробному, де підберемо оптимальний формат для тебе 😉
+          </div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q">Пробний урок — це безкоштовно?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Yes! Пробний урок повністю free! Викладач визначить твій рівень,
+            познайомить з методикою та надасть рекомендації. Без зобовʼязань —
+            just come and see, як у нас все працює ✨
+          </div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q">Який формат мені підходить?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Залежить від цілей! Індивідуальні — для max персоналізації.
+            Парні — якщо хочеш study buddy. Групові — для тих, хто loves динаміку.
+            На пробному допоможемо обрати perfect формат 🫂
+          </div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q">Для яких рівнів підходить?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Працюємо з усіма рівнями — від повного нуля (A1) до advanced (C1).
+            Для кожного підбирається своя програма. Don't worry — зробимо цей шлях
+            комфортним і в кайф! 🚀
+          </div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q">Чи готуєте до НМТ?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Absolutely! Підготовка до НМТ — системно і без стресу на максимальний бал.
+            Розбираємо формат, відпрацьовуємо кожну секцію з реальними завданнями.
+            На іспиті будеш full confident 💪
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM CTA -->
+  <section class="form-cta" id="form">
+    <div class="container">
+      <div class="form-cta-grid">
+        <div class="form-cta-text fade-up">
+          <span class="badge badge-yellow">Записатись</span>
+          <h2>Гоу на безкоштовний пробний урок</h2>
+          <p class="form-cta-desc">
+            Залиш контакти — ми напишемо тобі та домовимось про зручний час.
+            На пробному визначимо рівень, познайомимось і покажемо, як у нас все працює. No stress!
+          </p>
+          <div class="form-cta-perks">
+            <span class="form-perk">Безкоштовно</span>
+            <span class="form-perk">Визначення рівня</span>
+            <span class="form-perk">В зручний для вас час</span>
+          </div>
+        </div>
+        <div class="form-cta-card fade-up">
+          <form class="cta-form" id="ctaForm" >
+            <h3>Залиш заявку</h3>
+            <p class="form-sub">Передзвонимо протягом дня</p>
+            <div class="form-field">
+              <label for="userName">Твоє ім'я</label>
+              <input type="text" id="userName" name="name" placeholder="Як тебе звати?" required>
+            </div>
+            <div class="form-field">
+              <label>Де з тобою зв'язатися?</label>
+              <div class="contact-tabs">
+                <button type="button" class="contact-tab active" data-contact="instagram">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                  Instagram
+                </button>
+                <button type="button" class="contact-tab" data-contact="telegram">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                  Telegram
+                </button>
+                <button type="button" class="contact-tab" data-contact="phone">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  Зателефонувати
+                </button>
+              </div>
+              <input type="hidden" name="contact_method" id="contactMethod" value="instagram">
+            </div>
+            <div class="form-field ig-field">
+              <label for="userInstagram">Твій Instagram</label>
+              <input type="text" id="userInstagram" name="instagram" placeholder="@username">
+            </div>
+            <div class="form-field">
+              <label for="userPhone">Номер телефону</label>
+              <input type="tel" id="userPhone" name="phone" placeholder="+380 __ ___ __ __" required>
+            </div>
+            <button type="submit" class="btn-yellow form-submit">Записатись на пробний</button>
+            <p class="form-note">Натискаючи кнопку, ти погоджуєшся з обробкою персональних даних</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER -->
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,80 C120,140 240,10 360,70 C480,130 600,5 720,65 C840,130 960,10 1080,75 C1200,135 1320,15 1440,70 L1440,120 L0,120 Z" fill="#fff7cc"/>
+    </svg>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>BLISSS.<span class="eng">ENG</span></h3>
+          <p>Школа сучасної англійської, де мову не зубрять, а проживають у кайф ✨</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/blisss.eng" target="_blank" rel="noopener" class="f-social" aria-label="Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://t.me/blisss_eng" target="_blank" rel="noopener" class="f-social" aria-label="Telegram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+            <a href="tel:+380981339883" class="f-social" aria-label="Телефон">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#formats">Формати</a></li>
+            <li><a href="#pricing">Ціни</a></li>
+            <li><a href="#reviews">Відгуки</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Корисне</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#quiz">Пробний урок</a></li>
+            <li><a href="#founder">Засновниця</a></li>
+            <li><a href="#teachers">Викладачі</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Контакти</h4>
+          <ul>
+            <li><a href="mailto:blisss.eng@gmail.com">blisss.eng@gmail.com</a></li>
+            <li><a href="https://instagram.com/blisss.eng" target="_blank" rel="noopener">@blisss.eng</a></li>
+            <li><a href="https://t.me/blisss_eng" target="_blank" rel="noopener">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 BLISSS.ENG. All rights reserved ✨
+      </div>
+    </div>
+  </footer>
+
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-backdrop"></div>
+    <div class="video-modal-content">
+      <button class="video-modal-close" aria-label="Закрити">&times;</button>
+      <video id="modalVideo" controls playsinline></video>
+    </div>
+  </div>
+
+  <a href="tel:+380981339883" class="call-btn" id="callBtn" aria-label="Зателефонувати">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
