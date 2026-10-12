@@ -2333,9 +2333,15 @@ div.teacher-img {
     max-width: none;
     border-radius: var(--radius);
   }
-  .video-play-btn {
+  .video-play-btn:not(.video-play-btn--filled) {
     width: 40px;
     height: 40px;
+  }
+  .video-play-btn--filled {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    padding: 10px 20px;
   }
   .video-play-btn svg {
     width: 18px;
