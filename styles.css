@@ -2215,6 +2215,7 @@ div.teacher-img {
 }
 
 @media (max-width: 768px) {
+  html { font-size: 15px; }
   section, .about, .formats, .founder, .teachers, .pricing, .reviews, .trial, .faq {
     padding: 70px 0;
   }
@@ -2232,7 +2233,8 @@ div.teacher-img {
 }
 
 @media (max-width: 480px) {
-  .container { padding: 0 16px; }
+  html { font-size: 14px; }
+  .container { padding: 0 14px; }
   .hero-stats { gap: 20px; }
   .hero-blob { width: 220px; height: 220px; }
   .hero-blob img { width: 140px; }
