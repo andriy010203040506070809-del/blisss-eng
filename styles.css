@@ -968,6 +968,8 @@ div.teacher-img {
   font-weight: 600;
   gap: 8px;
   margin-top: 10px;
+  white-space: nowrap;
+  justify-content: center;
 }
 .video-play-btn--filled:hover {
   transform: scale(1.05);
@@ -1006,7 +1008,7 @@ div.teacher-img {
   }
   .teachers-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 32px;
     max-width: 420px;
     margin: 0 auto;
   }
@@ -1028,7 +1030,8 @@ div.teacher-img {
   }
   .video-play-btn--filled {
     font-size: 0.8rem;
-    padding: 8px 16px;
+    padding: 10px 20px;
+    width: 100%;
   }
   .teacher-chip {
     font-size: 0.75rem;
