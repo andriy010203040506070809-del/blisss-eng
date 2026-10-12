@@ -409,6 +409,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const privacyModal = document.getElementById('privacyModal');
   if (privacyModal) {
     privacyModal.addEventListener('wheel', (e) => e.stopPropagation());
+    privacyModal.addEventListener('touchmove', (e) => {
+      if (e.target.closest('.privacy-modal-content')) {
+        e.stopPropagation();
+      } else {
+        e.preventDefault();
+      }
+    }, { passive: false });
 
     const openPrivacy = () => {
       privacyModal.classList.add('active');
