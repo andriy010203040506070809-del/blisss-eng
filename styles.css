@@ -91,7 +91,7 @@ ul { list-style: none; }
   color: var(--light-blue);
   margin-left: 0;
   letter-spacing: -0.02em;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 .nav-links {
@@ -1939,7 +1939,7 @@ div.teacher-img {
   margin-bottom: 12px;
 }
 
-.footer-brand h3 .eng { font-weight: 800; font-size: inherit; color: var(--blue); margin-left: 6px; }
+.footer-brand h3 .eng { font-weight: 800; font-size: inherit; color: var(--blue); margin-left: 6px; text-transform: uppercase; }
 
 .footer-brand p {
   opacity: 0.6;
