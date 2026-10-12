@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blisss-eng.com/sitemap.xml

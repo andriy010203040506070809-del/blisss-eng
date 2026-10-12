@@ -406,4 +406,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const privacyModal = document.getElementById('privacyModal');
+  if (privacyModal) {
+    privacyModal.addEventListener('wheel', (e) => e.stopPropagation());
+
+    const openPrivacy = () => {
+      privacyModal.classList.add('active');
+      lenis.stop();
+    };
+    const closePrivacy = () => {
+      privacyModal.classList.remove('active');
+      lenis.start();
+    };
+    document.querySelectorAll('[data-open-privacy]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        openPrivacy();
+      });
+    });
+    privacyModal.querySelector('.privacy-modal-close').addEventListener('click', closePrivacy);
+    privacyModal.querySelector('.privacy-modal-backdrop').addEventListener('click', closePrivacy);
+  }
+
 });

@@ -2328,3 +2328,98 @@ div.teacher-img {
     height: 18px;
   }
 }
+
+.privacy-link {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.privacy-link:hover { opacity: 0.7; }
+
+.privacy-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.privacy-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.privacy-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+.privacy-modal-content {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius);
+  max-width: 680px;
+  width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 40px;
+  transform: scale(0.95);
+  transition: transform 0.3s;
+}
+.privacy-modal.active .privacy-modal-content {
+  transform: scale(1);
+}
+.privacy-modal-content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+.privacy-modal-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--dark);
+  margin: 20px 0 8px;
+}
+.privacy-text p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 8px;
+}
+.privacy-text ul {
+  margin: 8px 0 12px 20px;
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.7;
+}
+.privacy-text a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.privacy-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--dark);
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+.privacy-modal-close:hover {
+  background: #000;
+  transform: scale(1.1);
+}
