@@ -2215,7 +2215,7 @@ div.teacher-img {
 }
 
 @media (max-width: 768px) {
-  html { font-size: 15px; }
+  .container { padding: 0 28px; }
   section, .about, .formats, .founder, .teachers, .pricing, .reviews, .trial, .faq {
     padding: 70px 0;
   }
@@ -2233,11 +2233,18 @@ div.teacher-img {
 }
 
 @media (max-width: 480px) {
-  html { font-size: 14px; }
-  .container { padding: 0 14px; }
+  .container { padding: 0 20px; }
   .hero-stats { gap: 20px; }
   .hero-blob { width: 220px; height: 220px; }
   .hero-blob img { width: 140px; }
+  .p-card { padding: 32px 22px; }
+  .rev-card { padding: 22px; }
+  .form-cta-card { padding: 28px 18px; }
+  .quiz-wrap { padding: 28px 16px; margin: 0; }
+  .faq-q { padding: 18px 20px; }
+  .faq-a-inner { padding: 0 20px 18px; }
+  .teacher-body { padding: 18px; }
+  .founder-photo { max-width: 280px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
