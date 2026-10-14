@@ -2,11 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## UI UX Pro Max (Skill)
 
 UI UX Pro Max is an AI-powered design intelligence toolkit providing searchable databases of UI styles, color palettes, font pairings, chart types, and UX guidelines. It works as a skill/workflow for AI coding assistants (Claude Code, Windsurf, Cursor, etc.).
 
-## Search Command
+### Search Command
 
 ```bash
 python3 src/ui-ux-pro-max/scripts/search.py "<query>" --domain <domain> [-n <max_results>]
@@ -30,89 +30,122 @@ python3 src/ui-ux-pro-max/scripts/search.py "<query>" --domain <domain> [-n <max
 ```bash
 python3 src/ui-ux-pro-max/scripts/search.py "<query>" --design-system --variance <1-10> --motion <1-10> --density <1-10>
 ```
-`--variance` biases style selection (centered/minimal → bold/asymmetric), `--motion` attaches a matching GSAP snippet from `motion.csv`, `--density` overrides the spacing-scale tokens (spacious → dense/dashboard). Any dial left unset behaves exactly as before.
-
-**Stack search:**
-```bash
-python3 src/ui-ux-pro-max/scripts/search.py "<query>" --stack <stack>
-```
-Available stacks: `html-tailwind` (default), `react`, `nextjs`, `astro`, `vue`, `nuxtjs`, `nuxt-ui`, `svelte`, `swiftui`, `react-native`, `flutter`, `shadcn`, `jetpack-compose`, `threejs`, `angular`, `laravel`, `javafx`, `wpf`, `winui`, `avalonia`, `uno`, `uwp`
-
-## Architecture
-
-```
-src/ui-ux-pro-max/                # Source of Truth
-├── data/                         # Canonical CSV databases
-│   ├── products.csv, styles.csv, colors.csv, typography.csv, ...
-│   └── stacks/                   # Stack-specific guidelines
-├── scripts/
-│   ├── search.py                 # CLI entry point
-│   ├── core.py                   # BM25 + regex hybrid search engine
-│   └── design_system.py          # Design system generation
-└── templates/
-    ├── base/                     # Base templates (skill-content.md, quick-reference.md)
-    └── platforms/                # Platform configs (claude.json, cursor.json, ...)
-
-cli/                              # CLI installer (ui-ux-pro-max-cli on npm)
-├── src/
-│   ├── commands/init.ts          # Install command with template generation
-│   └── utils/template.ts         # Template rendering engine
-├── scripts/sync-assets.mjs       # Mirrors src/ -> cli/assets/ AND src/ -> .claude/skills/ui-ux-pro-max/
-└── assets/                       # Bundled assets (~564KB)
-    ├── data/                     # Copy of src/ui-ux-pro-max/data/
-    ├── scripts/                  # Copy of src/ui-ux-pro-max/scripts/
-    └── templates/                # Copy of src/ui-ux-pro-max/templates/
-
-.claude/skills/ui-ux-pro-max/     # Claude Code skill: hand-authored SKILL.md +
-                                   # data/, scripts/ mirrored from src/ (see Sync Rules)
-.claude-plugin/                   # Claude Marketplace publishing
-```
-
-The search engine uses BM25 ranking combined with regex matching. Domain auto-detection is available when `--domain` is omitted.
-
-## Sync Rules
-
-**Source of Truth:** `src/ui-ux-pro-max/`
-
-There are no symlinks in this repo (git-on-Windows checks them out as plain
-text files pointing at a path, which silently breaks the skill) -- every
-mirrored copy below is a real, independently-committed file kept in sync by
-`cli/scripts/sync-assets.mjs`, enforced by the "Check asset sync" CI workflow.
-
-When modifying files:
-
-1. **Data & Scripts** - Edit in `src/ui-ux-pro-max/`:
-   - `data/*.csv` and `data/stacks/*.csv`
-   - `scripts/*.py`
-   - Then run the sync below -- changes are NOT automatically reflected anywhere else.
-
-2. **Templates** - Edit in `src/ui-ux-pro-max/templates/`:
-   - `base/skill-content.md` - Common SKILL.md content
-   - `base/quick-reference.md` - Quick reference section (Claude only)
-   - `platforms/*.json` - Platform-specific configs
-
-3. **Sync before publishing / committing data or script changes:**
-   ```bash
-   cd cli
-   npm run sync:assets   # mirrors src/ -> cli/assets/ AND src/ -> .claude/skills/ui-ux-pro-max/{data,scripts}
-   npm run check:assets  # verify, no npm install required
-   ```
-   `.claude/skills/ui-ux-pro-max/SKILL.md` itself is hand-authored, not
-   mirrored or template-generated -- edit it directly.
-
-4. **Reference Folders** - No manual sync needed. The CLI generates these from templates during `uipro init`.
-
-## Prerequisites
-
-Python 3.x (no external dependencies required)
 
 **Note:** On Windows, use `python` instead of `python3` to run the scripts.
 
-## Git Workflow
+---
 
-Never push directly to `main`. Always:
+## BLISSS.ENG — Сайт онлайн-школи англійської мови
 
-1. Create a new branch: `git checkout -b feat/...` or `fix/...`
-2. Commit changes
-3. Push branch: `git push -u origin <branch>`
-4. Create PR: `gh pr create`
+### Проект
+
+Односторінковий сайт для онлайн-школи англійської мови **BLISSS.ENG**, заснованої Андріаною.
+Сайт зібраний на чистому HTML/CSS/JS (без фреймворків), використовує Lenis для smooth scroll.
+
+- **Домен:** blisss-eng.com (куплений на hosting.ua, DNS A-записи → 76.76.21.21)
+- **Хостинг:** Vercel (проект `blisss-eng`, ID: `prj_LDe9pJUGn4UzEinjEPKCSE9muSOI`, team: `team_clzZkoVjOpRRJbuE8mroCAOG`)
+- **Репозиторій:** github.com/andriy010203040506070809-del/blisss-eng.git (гілка `master`)
+- **SSL:** Сертифікат видано через Vercel API (cert_UI0e2R3hr16Vx9UOY7Hr2xBW)
+- **Деплой:** автоматичний при push в master
+
+### Структура файлів
+
+```
+index.html      — головна (і єдина) сторінка
+styles.css      — всі стилі
+script.js       — вся логіка (Lenis, quiz, FAQ, форми, модалки, тощо)
+sitemap.xml     — карта сайту для Google
+robots.txt      — дозвіл індексації
+assets/         — локальні зображення (блоб, стрілка)
+```
+
+### Секції сайту (порядок зверху вниз)
+
+1. **Header** — фіксований, логотип BLISSS.ENG, навігація (desktop), бургер-меню (mobile, z-index: 101)
+2. **Hero** — заголовок, опис, CTA-кнопка "Безкоштовний пробний урок", статистика (5+ років, 200+ учнів, 4 формати), блоб з фото
+3. **Marquee** — біжучий рядок
+4. **About** — блок "Про нас" з сертифікатами
+5. **Quiz** — 5-кроковий квіз + форма збору заявок (відправка на Google Apps Script)
+6. **Founder** — блок про Андріану (засновницю)
+7. **Formats** — формати навчання (індивідуальні, парні, групові, корпоративні)
+8. **Teachers** — 3 картки викладачів (Андріана, Дарія, Анастасія), кнопки "Відео знайомство" з Cloudinary відео
+9. **Pricing** — 4 таби: Дорослі A1-B1 (active за замовчуванням), Дорослі B2-C1, Діти, Підготовка до екзаменів (IELTS/CAE/FCE/НМТ)
+10. **Reviews** — 3 ряди відгуків:
+    - Ряд 1: Назар (фото + play), Елізавета (фото + play), Ванесса (фото) — розгорнуті
+    - Ряд 2: Вероніка, Валерія, Оксана, Дмитро — компактні
+    - Ряд 3: Аліна, Максим, Софія — компактні з fade
+    - Кнопка "Усі відгуки" → Instagram highlights
+    - Play кнопки на Назарі/Елізаветі ведуть на Google Drive з відео
+11. **FAQ** — розкриваються по кліку (акордеон)
+12. **Form CTA** — друга форма збору заявок
+13. **Footer** — контакти, соцмережі, лого
+
+### Ключові технічні деталі
+
+#### Бібліотеки
+- **Lenis** — smooth scroll (CDN). При відкритті модалок треба `lenis.stop()` + `stopPropagation` на wheel/touchmove
+
+#### Форми
+- Обидві форми (quiz + CTA) відправляють на Google Apps Script:
+  `https://script.google.com/macros/s/AKfycbwh5CA5Zbw_d5ggfPcbynuCtXtdCIWRLquWNF-Nh6rKCVpMiMRY-GMmO1gKW2ZovnL-/exec`
+- Контактні таби: Telegram / Instagram / Телефон
+- Після відправки — повідомлення "You did it! 🎉"
+
+#### Зображення
+- Фото викладачів і відгуків — Cloudinary (q_auto, f_auto, w_120/w_600, c_fill, g_face)
+- Відео викладачів — Cloudinary (mp4/mov)
+- Прапорці в hero badge — Twemoji SVG з jsdelivr CDN (не емоджі, бо Windows не рендерить правильно)
+
+#### SEO
+- JSON-LD: EducationalOrganization + FAQPage
+- Canonical URL: https://blisss-eng.com
+- Open Graph теги (title, description, image з Cloudinary)
+- Twitter Card теги
+- Meta keywords
+- Alt-теги на зображеннях
+- sitemap.xml + robots.txt
+- Google Search Console: верифікація через DNS TXT запис
+
+#### Модальні вікна
+- **Відео модалка** — відтворює Cloudinary відео в 9:16 форматі, закриття по хрестику/бекдропу/Escape
+- **Політика конфіденційності** — попап з повним текстом, відкривається по кліку "політикою конфіденційності" під формами. На мобільних відкривається знизу як sheet. Скрол: `lenis.stop()` + `e.stopPropagation()` на wheel + `touchmove` обробка
+
+#### Мобільна версія (responsive)
+- Breakpoints: 1024px, 768px, 480px
+- Font-size: 18px (desktop) → 17px (768px) → 16px (480px)
+- Container padding: 24px (desktop) → 28px (768px) → 20px (480px)
+- Бургер-меню (z-index: 101, вище хедера з z-index: 100)
+- Плашка "Англійська нарешті в кайф" прихована на mobile
+- Кнопка hero на всю ширину, текст по центру
+- Кнопка "Відео знайомство" на всю ширину (`.video-play-btn:not(.video-play-btn--filled)` для правильної специфічності)
+- Картки викладачів: gap 32px
+- Call button: 48x48 (замість 56x56)
+
+### Кольорова палітра (CSS змінні)
+
+- `--yellow: #fff7cc` — основний фон, акцентний колір
+- `--blue: #7da6d6` — вторинний
+- `--light-blue: #eff6fd` — світлий фон карток
+- `--dark: #30485f` — темний фон, текст
+- `--black: #000000`
+
+### Шрифти
+
+- Заголовки: **Unbounded** (Google Fonts)
+- Тіло: **Nunito** (Google Fonts)
+
+### Деплой
+
+```bash
+git add <файли>
+git commit -m "Опис змін"
+git push origin master
+# Vercel автоматично підхоплює і деплоїть
+```
+
+### Відомі особливості
+
+- Lenis перехоплює wheel-події — при модалках обов'язково `lenis.stop()` + `stopPropagation`
+- Windows не рендерить прапорці-емоджі — використовуємо Twemoji SVG
+- `.video-play-btn` базовий стиль (48x48, border-radius: 50%) перебиває `--filled` модифікатор на мобільних через порядок CSS — вирішено через `:not()` селектор
+- Mob menu z-index має бути вищим за header (101 > 100)

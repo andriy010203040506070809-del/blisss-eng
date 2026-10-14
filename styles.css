@@ -1461,7 +1461,7 @@ div.teacher-img {
   transition: max-height 0.4s ease;
 }
 
-.faq-item.open .faq-a { max-height: 300px; }
+.faq-item.open .faq-a { max-height: 600px; }
 
 .faq-a-inner {
   padding: 0 28px 22px;
