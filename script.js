@@ -360,6 +360,15 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(data)
       });
       formSent = true;
+      // Meta Lead event: browser + server (Conversions API) with shared event_id
+      try {
+        var leadId = (window.blissEventId ? window.blissEventId() : 'e' + Date.now());
+        if (window.fbq) fbq('track', 'Lead', {}, { eventID: leadId });
+        if (window.sendCapi) window.sendCapi('Lead', leadId, {
+          phone: data.phone || '',
+          custom_data: { content_name: data.source || 'form' }
+        });
+      } catch (e) {}
       showSuccess(form);
     } catch {
       btn.textContent = 'Oops, спробуй ще раз';

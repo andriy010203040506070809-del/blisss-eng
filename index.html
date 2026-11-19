@@ -29,7 +29,44 @@
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '1668176501666152');
-  fbq('track', 'PageView');
+
+  // --- Helpers for deduplicated browser + Conversions API tracking ---
+  window.blissEventId = function () {
+    return (self.crypto && crypto.randomUUID)
+      ? crypto.randomUUID()
+      : 'e' + Date.now() + Math.random().toString(16).slice(2);
+  };
+  window.blissGetCookie = function (name) {
+    var m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return m ? m.pop() : '';
+  };
+  window.sendCapi = function (eventName, eventId, data) {
+    data = data || {};
+    try {
+      fetch('/api/capi', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        keepalive: true,
+        body: JSON.stringify({
+          event_name: eventName,
+          event_id: eventId,
+          event_source_url: location.href,
+          email: data.email || '',
+          phone: data.phone || '',
+          custom_data: data.custom_data || {},
+          fbp: window.blissGetCookie('_fbp'),
+          fbc: window.blissGetCookie('_fbc')
+        })
+      }).catch(function () {});
+    } catch (e) {}
+  };
+
+  // PageView: fire in browser and server with a shared event_id (dedup)
+  (function () {
+    var id = window.blissEventId();
+    fbq('track', 'PageView', {}, { eventID: id });
+    window.sendCapi('PageView', id);
+  })();
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1668176501666152&ev=PageView&noscript=1"
