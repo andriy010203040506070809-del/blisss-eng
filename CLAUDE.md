@@ -54,6 +54,7 @@ python3 src/ui-ux-pro-max/scripts/search.py "<query>" --design-system --variance
 index.html      — головна (і єдина) сторінка
 styles.css      — всі стилі
 script.js       — вся логіка (Lenis, quiz, FAQ, форми, модалки, тощо)
+api/capi.js     — serverless-функція Vercel для Meta Conversions API (серверні події)
 sitemap.xml     — карта сайту для Google
 robots.txt      — дозвіл індексації
 assets/         — локальні зображення (блоб, стрілка)
@@ -149,3 +150,40 @@ git push origin master
 - Windows не рендерить прапорці-емоджі — використовуємо Twemoji SVG
 - `.video-play-btn` базовий стиль (48x48, border-radius: 50%) перебиває `--filled` модифікатор на мобільних через порядок CSS — вирішено через `:not()` селектор
 - Mob menu z-index має бути вищим за header (101 > 100)
+
+### Meta Conversions API (CAPI) — серверне відстеження подій
+
+Крім браузерного Meta Pixel (fbq) події дублюються **з сервера** через Conversions API.
+Один піксель (ID 1668176501666152) — два джерела: «Браузер» + «Сервер».
+
+**Навіщо:** браузерні події губляться (adblock, iOS, cookie-банери). CAPI їх
+компенсує → точніша оптимізація реклами.
+
+#### Файли / логіка
+- `api/capi.js` — serverless-функція Vercel. Приймає POST з браузера, хешує PII
+  (email/phone → SHA-256), додає IP + user-agent + fbp/fbc, шле на Graph API
+  (`graph.facebook.com/v21.0/{PIXEL_ID}/events`).
+- `index.html` — хелпери `blissEventId()`, `blissGetCookie()`, `sendCapi()`.
+  PageView шлеться і в браузер (`fbq`), і на сервер з одним `event_id`.
+- `script.js` → `submitForm()` — подія **Lead** при відправці форми
+  (браузер + сервер, спільний `event_id`, передається phone).
+
+#### Дедуплікація
+Браузерна й серверна подія мають **однаковий `event_id`** + однакову назву —
+Meta рахує їх як одну. Без цього були б подвійні події.
+
+#### Токен
+- Зберігається у змінній оточення Vercel **`FB_CAPI_TOKEN`** (sensitive,
+  усі середовища). У код НЕ вписувати.
+- ⚠️ При додаванні через PowerShell stdin попадає BOM → «Cannot parse access token».
+  Додавати через Git Bash: `printf '%s' "$TOKEN" | vercel env add FB_CAPI_TOKEN <env>`.
+- Після зміни токена — **перевидати** production: `vercel --prod --yes`.
+
+#### Перевірка
+```bash
+curl -s -X POST https://blisss-eng.com/api/capi \
+  -H "Content-Type: application/json" \
+  -d '{"event_name":"PageView","event_id":"test-1","event_source_url":"https://blisss-eng.com/"}'
+# Очікувано: {"ok":true,"fb":{"events_received":1}}
+```
+Наживо — Events Manager → Bliss pixel → «Тестування подій» (код TEST#####).
